@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const urlPath = `${Astro.url.origin}/api/v1`
+---
+
+<Layout title="About | Drinks API">
+  <main class="w-full max-w-page pb-16">
+    <h1 class="py-3 sm:py-6 font-medium text-3xl sm:text-4xl">Acerca de</h1>
+    <section class="px-4 max-w-[900px]">
+      <h2 class="text-xl sm:text-2xl">¿Qué es esto?</h2>
+      <p class="pt-4 text-pretty">
+        Este sitio web proporciona una interfaz de API REST a objetos detallados a 
+        partir de miles de datos relacionados con bebidas alcohólicas. Usando este 
+        sitio web, puedes obtener información sobre diferentes bebidas alcohólicas 
+        alrededor del mundo.
+      </p>
+    </section>
+    <section class="mt-8 sm:mt-12 px-4 max-w-[900px]">
+      <h2 class="text-xl sm:text-2xl">¿Qué es una API?</h2>
+      <p class="pt-4 text-pretty">
+        Una API (Application Programming Interface) permite a los desarrolladores 
+        acceder a las funcionalidades de una aplicación, servicio o plataforma sin 
+        necesidad de conocer sus detalles internos. En este caso, es una base de 
+        datos con cientos de objetos relacionados con bebidas alcohólicas.
+      </p>
+    </section>
+    <section class="mt-8 sm:mt-12 px-4 max-w-[900px]">
+      <h2 class="text-xl sm:text-2xl">Rutas</h2>
+      <p class="pt-4 text-pretty">
+        Estos son todos los métodos HTTP admitidos. Puedes usar http o https para tus solicitudes.
+      </p>
+      <ul class="flex flex-col gap-y-1 pl-4 pt-6">
+        <li class="flex gap-8">
+          <span>GET</span>
+          <a href={`${urlPath}/brand`} class="underline">/brand</a>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <span>/brand/[brand]</span>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <a href={`${urlPath}/category`} class="underline">/category</a>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <span>/category/[category]</span>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <span>/category/[category]/[sub-category]</span>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <a href={`${urlPath}/made-in`} class="underline">/made-in</a>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <span>/made-in/[country]</span>
+        </li>
+        <li class="flex gap-8">
+          <span>GET</span>
+          <a href={`${urlPath}/drinks?limit=100&page=1`} class="underline">/drinks?limit=100&page=1</a>
+        </li>
+      </ul>
+    </section>
+    <section class="mt-8 sm:mt-12 px-4 max-w-[900px]">
+      <h2 class="text-xl sm:text-2xl">¿Cuáles son las tecnologías que se utilizan?</h2>
+      <p class="pt-4 text-pretty">
+        La API se construyó con 
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" aria-label="javascript" target="_blank" rel="noreferrer" class="underline">JavaScript</a> 
+        utilizando 
+        <a href="https://nodejs.org/en" aria-label="nodejs" target="_blank" rel="noreferrer" class="underline">Node.js</a>
+        junto con una base de datos no relacional en 
+        <a href="https://www.mongodb.com" aria-label="mongodb" target="_blank" rel="noreferrer" class="underline">MongoDB</a>
+        para almacenar los datos. Se utilizó la biblioteca 
+        <a href="https://expressjs.com" aria-label="express" target="_blank" rel="noreferrer" class="underline">Express</a>
+        para exponer los datos a través de una API REST.
+      </p>
+      <p class="pt-4 text-pretty">
+        El sitio web utiliza el framework 
+        <a href="https://astro.build" aria-label="astro" target="_blank" rel="noreferrer" class="underline">Astro</a>
+        y el código reside en su propio proyecto de 
+        <a href="https://github.com/Unnunoctio/Drinks-Website" aria-label="drinks-website-github" target="_blank" rel="noreferrer" class="underline">GitHub</a>. 
+        Se utilizó 
+        <a href="https://vercel.com" aria-label="vercel" target="_blank" rel="noreferrer" class="underline">Vercel</a> 
+        para el despliegue del sitio.
+      </p>
+    </section>
+  </main>
+</Layout>
