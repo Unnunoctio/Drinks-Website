@@ -1,9 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Search from "../islands/Search.svelte";
+
+const urlPath = `${Astro.url.origin}/api/v1/`
 ---
 
 <Layout title="Drinks API">
-	<main>
-		<h1 class="font-medium text-emerald-500">Drinks API</h1>
-	</main>
+  <main class="w-full max-w-page">
+    <section class="py-14 sm:py-20 max-w-[520px]">
+      <h1 class="font-medium text-5xl sm:text-6xl">Drinks API</h1>
+      <p class="mt-12 text-xl sm:text-2xl">
+        Todas las bebidas alcohólicas que necesitas, en un solo lugar.
+      </p>
+      <p class="mt-2 text-xl sm:text-2xl">
+        API moderna, de código abierto y gratuita.
+      </p>
+    </section>
+    <section>
+      <h2 class="pb-4 font-medium text-4xl">¡Pruebalo ahora!</h2>
+      <Search urlPath={urlPath} client:load />
+    </section>
+  </main>
 </Layout>
