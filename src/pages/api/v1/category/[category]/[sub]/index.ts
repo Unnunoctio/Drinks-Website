@@ -1,17 +1,13 @@
 import type { APIRoute } from "astro";
 
-export const GET: APIRoute = ({ params }) => {
-  const category = params.category
-  const subCategory = params['sub']
+export const GET: APIRoute = async ({ request }) => {
+  const DRINKS_API_URL = import.meta.env.DRINKS_API_URL
+  const fetchUrl = request.url.split('/api')[1]
 
-  const json = {
-    "category": category,
-    "sub-category": subCategory, 
-    count: 15,
-    drinks: []
-  }
+  const res = await fetch(DRINKS_API_URL + fetchUrl)
+  const data = await res.json()
 
-  return new Response(JSON.stringify(json), {
+  return new Response(JSON.stringify(data), {
     status: 200,
     headers: {
       "Content-Type": "application/json"
