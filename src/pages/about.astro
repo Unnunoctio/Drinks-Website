@@ -33,31 +33,31 @@ const urlPath = `${Astro.url.origin}/api/v1`
       <ul class="flex flex-col gap-y-1 pl-4 pt-6">
         <li class="flex gap-8">
           <span>GET</span>
-          <a href={`${urlPath}/brand`} class="text-blue-500 hover:underline">/brand</a>
+          <a href={`${urlPath}/brands`} class="text-blue-500 hover:underline">/brands</a>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <span>/brand/[brand]</span>
+          <span>/brands/[brand]</span>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <a href={`${urlPath}/category`} class="text-blue-500 hover:underline">/category</a>
+          <a href={`${urlPath}/categories`} class="text-blue-500 hover:underline">/categories</a>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <span>/category/[category]</span>
+          <span>/categories/[category]</span>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <span>/category/[category]/[sub-category]</span>
+          <span>/categories/[category]/[sub-category]</span>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <a href={`${urlPath}/made-in`} class="text-blue-500 hover:underline">/made-in</a>
+          <a href={`${urlPath}/origins`} class="text-blue-500 hover:underline">/origins</a>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
-          <span>/made-in/[country]</span>
+          <span>/origins/[country]</span>
         </li>
         <li class="flex gap-8">
           <span>GET</span>
@@ -71,11 +71,11 @@ const urlPath = `${Astro.url.origin}/api/v1`
         La API se construyó con 
         <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" aria-label="javascript" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">JavaScript</a> 
         utilizando 
-        <a href="https://nodejs.org/en" aria-label="nodejs" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">Node.js</a>
+        <a href="https://bun.sh" aria-label="bunjs" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">Bun</a>
         junto con una base de datos no relacional en 
         <a href="https://www.mongodb.com" aria-label="mongodb" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">MongoDB</a>
         para almacenar los datos. Se utilizó la biblioteca 
-        <a href="https://expressjs.com" aria-label="express" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">Express</a>
+        <a href="https://hono.dev" aria-label="hono" target="_blank" rel="noreferrer" class="text-blue-500 hover:underline">Hono</a>
         para exponer los datos a través de una API REST.
       </p>
       <p class="pt-4 text-pretty">
