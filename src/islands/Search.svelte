@@ -2,7 +2,7 @@
   import ApiPetition from "./ApiPetition.svelte";
 
   export let urlPath: string;
-  let urlActive = "brand/corona"
+  let urlActive = "brands/corona"
   let urlPetition = `${urlPath}${urlActive}`
 
   function submit() {
