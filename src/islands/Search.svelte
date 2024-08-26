@@ -34,16 +34,16 @@
 
 <section class="flex flex-wrap mt-2">
   <p class="pr-1">Otras peticiones:</p>
-  <button on:click={() => changeInput("brand/corona")} class="text-blue-500 hover:underline">
-    brand/corona
+  <button on:click={() => changeInput("brands/corona")} class="text-blue-500 hover:underline">
+    brands/corona
   </button>
   <p class="pr-1">,</p>
-  <button on:click={() => changeInput("category/cervezas")} class="text-blue-500 hover:underline">
-    category/cervezas
+  <button on:click={() => changeInput("categories/cervezas")} class="text-blue-500 hover:underline">
+    categories/cervezas
   </button>
   <p class="pr-1">,</p>
-  <button on:click={() => changeInput("made-in/alemania")} class="text-blue-500 hover:underline">
-    made-in/alemania
+  <button on:click={() => changeInput("origins/alemania")} class="text-blue-500 hover:underline">
+    origins/alemania
   </button>
   <p class="pr-1">, or</p>
   <button on:click={() => changeInput("drinks?limit=5&page=1")} class="text-blue-500 hover:underline">
